@@ -1,0 +1,6 @@
+GET : http://localhost:9000/students
+GET : http://localhost:9000/liens/<id>
+POST : http://localhost:9000/aliens
+PATCH : http://localhost:9000/aliens/<id>
+
+comand for run the server using nodemon ==> nodemon 
