@@ -28,8 +28,12 @@ router.post('/', async(req, res) => {
 })
 
 router.delete('/', async(req, res) => {
-    const deleteStudent = req.body.id;
-    deleteStudent.
+    const deleteStudent_id = req.body.id;
+    try {
+        Student.findByIdAndDelete(deleteStudent_id)
+    } catch(err) {
+        res.send("Error")
+    }
 
 })
 

@@ -12,14 +12,14 @@ con.on('open', () => {
     console.log('connected....')
 })
 
-app.use(express.json())  // ???
+app.use(express.json())  //when start to work with json we have to use a app.use() 
 
 const studentRouter = require('./routes/students')
-app.use('/students', studentRouter)
+app.use('/students', studentRouter)     //when doing routing have to use the use() 
 
 //listening for the server and if the server started fire the function
 app.listen(9000, () => {
     console.log('Server started')
 })
 
-//what is the use of the use function
+
