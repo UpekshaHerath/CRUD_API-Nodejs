@@ -1,8 +1,9 @@
+/* API layer */
 const experss = require('express')
 const router = experss.Router()
 const Student = require("../models/student")
 
-router.get('/', async(req, res) => {
+router.get('/stu', async(req, res) => {     //pass the data to the frunt end 
     try {
         const students = await Student.find()
         res.json(students)
@@ -13,7 +14,7 @@ router.get('/', async(req, res) => {
 
 router.post('/', async(req, res) => {
     const student1 = new Student({
-        name: req.body.name,
+        name: req.body.name,        //take the name of the student and assign in to the student1 constant
         tech: req.body.tech,
         sub: req.body.sub
     })
@@ -24,6 +25,12 @@ router.post('/', async(req, res) => {
     } catch(err) {
         res.send("Error")
     }
+})
+
+router.delete('/', async(req, res) => {
+    const deleteStudent = req.body.id;
+    deleteStudent.
+
 })
 
 module.exports = router

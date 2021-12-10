@@ -1,3 +1,6 @@
+/** 
+ * ORM related stuff
+*/
 const mongoose = require('mongoose')
 
 const studentScheama = new mongoose.Schema({
@@ -15,5 +18,6 @@ const studentScheama = new mongoose.Schema({
         default: false
     }
 })
+
 
 module.exports = mongoose.model('Student', studentScheama)
